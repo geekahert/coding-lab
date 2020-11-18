@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Courses: Coding Labs</title>
+  <link rel="stylesheet" href="../css/headerfooter.css">
+  <link rel="stylesheet" href="../css/pricing.css">
+  <link rel="stylesheet" href="../css/signup_login.css">
+</head>
+
+<body>
+  <nav>
+    <div class="navbar">
+      <div class="logo">
+        <a href="../index.html"><img src="../images/logo.png" class="logos"></a>
+      </div>
+
+      <div class="navigation">
+        <a href="../index.html">Home</a>
+        <div class="drop">
+          <!--Dropdown Menue Starts Here-->
+          <a href="pricing.html" id="active">Courses</a>
+          <div class="drop-a">
+            <a href="pricing.html #web">Web Development</a>
+            <a href="pricing.html #app">App Development</a>
+          </div>
+        </div>
+        <a href="web_development.html">Web Development</a>
+        <a href="app_development.html">App Development</a>
+
+        <a href="about-us.html">About Us</a>
+
+      </div>
+
+
+
+
+      <div class="silog">
+        <div class="demo" id="demo">Free Demo</div>
+        <div class="signlogin">
+          <a onclick="document.getElementById('id08').style.display='block', signup()" style="width:auto;">Sign Up</a>
+          <a onclick="document.getElementById('id08').style.display='block' , login()" style="width:auto;">Login</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!-- Navigation ends here -->
+  <!-- LOGIN FORM STARTS HERE -->
+  <div class="login">
+    <div id="id08" class="form_bg">
+      <form class="form_bg-content animate">
+        <div class="container">
+          <span onclick="document.getElementById('id08').style.display='none'" class="close" title="Close Modal">&times;</span>
+          <label class="labels"><b>Username</b></label>
+          <input type="text" placeholder="Enter Username" required>
+          <label class="labels"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" required>
+          <button type="submit">
+            <h id="idlogin">Login</h>
+          </button>
+        </div>
+        <div class="container" style="background-color:#f1f1f1b5">
+          <button type="button" onclick="document.getElementById('id08').style.display='none'" class="cancelbtn">Cancel</button>
+          <button type="button" class="cancelbtn" id="forgot_password">Forgot password</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <!-- LOGIN FORM ENDS HERE -->
+
+
+  <main>
+    <div class="main">
+      <!-- Web Development starts here -->
+      <div class="heading">
+        <div id="web">
+          <h1>Web Development</h1><a href="#" class="btn">Learn More</a>
+        </div>
+      </div>
+      <div class="pricecard_web">
+        <!-- HTML CARD-->
+        <div class="price_card">
+          <img src="../images/html.jpg" style="width:100%">
+          <div class="price_card_container">
+            <div class="price_card_title">Html 5</div>
+            <div class="price_card_heading">Prerequisites : <div class="price_card_text"> None</div>
+            </div>
+            <div class="price_card_heading">Minimum-Age : <div class="price_card_text"> 6 yrs</div>
+            </div>
+            <div class="price_card_heading">Watchtime : <div class="price_card_text"> 17-18 hrs</div>
+            </div>
+            <div class="price_card_price">Pricing : <div class="price_card_text"> $50 &nbsp<s> $100 </s> &nbsp 50% off </div>
+            </div>
+            <a class="add_to_cart_button" onclick="addedtocart()">Add To Cart</a>
+
+          </div>
+
+        </div>
+        <div class="price_card" id="web">
+          <img src="../images/css3.jpg" style="width:100%">
+          <div class="price_card_container">
+            <div class="price_card_title">Css</div>
+            <div class="price_card_heading">Prerequisites : <div class="price_card_text">Basic Html knowledge</div>
+            </div>
+            <div class="price_card_heading">Minimum-Age : <div class="price_card_text"> 8 yrs</div>
+            </div>
+            <div class="price_card_heading">Watchtime : <div class="price_card_text"> 20-30 hrs</div>
+            </div>
+            <div class="price_card_price">Pricing : <div class="price_card_text"> $21 &nbsp<s> $60 </s> &nbsp 65% off </div>
+            </div>
+            <a class="add_to_cart_button" onclick="addedtocart()">Add To Cart</a>
+
+
+          </div>
+        </div>
+        <div class="price_card">
+          <img src="../images/javascript.png" style="width:50%; position:relative; left:28%;">
+          <div class="price_card_container">
+            <div class="price_card_title">Java Script</div>
+            <div class="price_card_heading">Prerequisites<div class="price_card_text"> : Should be comforable with HTML and CSS</div>
+            </div>
+            <div class="price_card_heading">Minimum-Age : <div class="price_card_text">12 yrs</div>
+            </div>
+            <div class="price_card_heading">Watchtime : <div class="price_card_text">16-22 hrs </div>
+            </div>
+            <div class="price_card_price">Pricing : <div class="price_card_text"> $65 &nbsp<s> $100 </s> &nbsp 35% off </div>
+            </div>
+            <a class="add_to_cart_button" onclick="addedtocart()">Add To Cart</a>
+
+
+          </div>
+        </div>
+        <div class="price_card combo_offer">
+          <img src="../images/combo-offer_logo.jpg" style="width:100%">
+          <div class="price_card_container">
+            <div class="price_card_title"><u>Complete Web Development Plan (Best Seller)</u></div>
+            <div class="price_card_heading">
+              <marquee>Best Seller For Web Development Save 75 % On Combo Pack </marquee>
+            </div>
+            <div class="price_card_heading">Prerequisites : <div class="price_card_text"> None</div>
+            </div>
+            <div class="price_card_heading">Minimum-Age : <div class="price_card_text"> 10yrs</div>
+            </div>
+            <div class="price_card_heading">Watchtime : <div class="price_card_text"> 50-60 hrs</div>
+            </div>
+            <div class="price_card_price">Pricing : <div class="price_card_price_text"><s>Orignal Price : $260</s> <br><s>Offer Price : $130</s> (50% off) <br><u> Bumper Sale Price: $100 (65% off) </u></div>
+            </div>
+            <div class="price_card_heading">
+              <marquee>Bumper Sale Price Only Till Stocks Last </marquee>
+            </div>
+            <a class="add_to_cart_button" onclick="addedtocart()">Add To Cart</a>
+
+
+          </div>
+        </div>
+
+
+      </div>
+      <!-- Web Development ENDS HERE -->
+      <!-- part-2 App Development Section -->
+      <div class="heading">
+        <div id="app">
+          <h1>App Development</h1><a href="#" class="btn">Learn More</a>
+        </div>
+      </div>
+      <!-- card 1 -->
+      <div class="pricecard_app">
+
+        <div class="price_card">
+          <img src="../images/a2.jpg" style="width:100%">
+          <div class="price_card_container">
+            <div class="price_card_title">Python</div>
+            <div class="price_card_heading">Prerequisites : <div class="price_card_text">None </div>
+            </div>
+            <div class="price_card_heading">Minimum-Age : <div class="price_card_text"> 12 yrs</div>
+            </div>
+            <div class="price_card_heading">Watchtime : <div class="price_card_text"> 30-40hrs</div>
+            </div>
+            <div class="price_card_price">Pricing : <div class="price_card_text">$72 &nbsp<s> $120 </s> &nbsp 40% off </s></div>
+            </div>
+            <a class="add_to_cart_button" onclick="addedtocart()">Add To Cart</a>
+
+
+          </div>
+        </div>
+        <div class="price_card">
+          <img src="../images/ruby.png" style="width:100%; background-color:white;">
+          <div class="price_card_title">Scala</div>
+          <div class="price_card_container">
+            <div class="price_card_heading">Prerequisites <div class="price_card_text"> : prior knowladge of Java or C++ will be benifitial</div>
+            </div>
+            <div class="price_card_heading">Minimum-Age : <div class="price_card_text"> 12 yrs</div>
+            </div>
+            <div class="price_card_heading">Watchtime : <div class="price_card_text"> 20-25 hrs</div>
+            </div>
+            <div class="price_card_price">Pricing : <div class="price_card_text">$65 &nbsp<s> $90 </s> &nbsp 25% off </s></div>
+            </div>
+
+            <a class="add_to_cart_button" onclick="addedtocart()">Add To Cart</a>
+
+
+          </div>
+        </div>
+        <div class="price_card">
+          <img src="../images/Swift_logo.png" style="width:100%">
+          <div class="price_card_container">
+            <div class="price_card_title">Swift</div>
+            <div class="price_card_heading">Prerequisites: <div class="price_card_text">Some prior Programming skills required</div>
+            </div>
+            <div class="price_card_heading">Minimum-Age : <div class="price_card_text"> 16 yrs</div>
+            </div>
+            <div class="price_card_price">Pricing : <div class="price_card_text">$54 &nbsp<s> $84 </s> &nbsp 35% off </s></div>
+            </div>
+            <a class="add_to_cart_button" onclick="addedtocart()">Add To Cart</a>
+          </div>
+        </div>
+
+
+
+        <div class="price_card combo_offer">
+          <img src="../images/combo-offer_app_logo.png" style="width:100%;">
+          <div class="price_card_container">
+            <div class="price_card_title"><u>Combo-Offer</u> :- Python + Scala + Swift (Best Seller)</div>
+            <div class="price_card_heading">
+              <marquee>Best Seller Save 75 % On Combo Pack </marquee>
+            </div>
+            <div class="price_card_heading">Prerequisites : <div class="price_card_text"> None</div>
+            </div>
+            <div class="price_card_heading">Minimum-Age : <div class="price_card_text"> 12yrs</div>
+            </div>
+            <div class="price_card_heading">Watchtime : <div class="price_card_text"> 60-70 hrs</div>
+            </div>
+            <div class="price_card_price">Pricing : <div class="price_card_price_text"><s>Orignal Price : $304 </s> <br><s>Offer Price : $152</s> (50% off) <br><u> Bumper Sale Price: $121 (65% off) </u></div>
+            </div>
+            <div class="price_card_heading">
+              <marquee>Bumper Sale Price Only Till Stocks Last </marquee>
+            </div>
+            <a class="add_to_cart_button" onclick="addedtocart()">Add To Cart</a>
+
+
+          </div>
+        </div>
+      </div>
+
+  </main>
+  <!-- price CARDS -->
+  <!-- Added To CArt  alert -->
+  <div id="addedtocart" class="form_bg">
+
+    <div class="added_cart">
+      Items added to cart<br><br>
+      <div class="close_addedtocart" onclick="close_addedtocart()">Close</a></div>
+    </div>
+  </div>
+
+  <!-- FOOTER STARTS HERE -->
+  <footer>
+    <div class="footer">
+      <div>
+        <h1>Contact Us : 1929381237</h1>
+      </div>
+      <div>
+        <h1>Email: helpdesk@website.com</h1>
+      </div>
+      <div>
+        <h1>Address: X-89, XYZ Street, India</h1>
+      </div>
+
+    </div>
+  </footer>
+  <!-- FOOTER ENDS HERE -->
+
+
+
+
+  <script>
+    function addedtocart() {
+      document.getElementById("addedtocart").style.display = "block"
+    }
+
+    function close_addedtocart() {
+      document.getElementById("addedtocart").style.display = "None"
+    }
+  </script>
+</body>
+<script type="text/javascript" src="../scripts/signup_login.js"></script>
+
+</html>

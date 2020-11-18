@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us: Coding Labs</title>
+  <link rel="stylesheet" href="../css/about_us.css">
+  <link rel="stylesheet" href="../css/headerfooter.css">
+  <link rel="stylesheet" href="../css/signup_login.css">
+</head>
+
+<body>
+  <!-- Navigation Bar starts here -->
+  <nav>
+    <div class="navbar">
+      <div class="logo">
+        <a href="../index.html"><img src="../images/logo.png" class="logos"></a>
+      </div>
+
+      <div class="navigation">
+        <a href="../index.html" id="one">Home</a>
+        <div class="drop">
+          <!--Dropdown Menu Starts Here-->
+          <a href="pricing.html">Courses</a>
+          <div class="drop-a">
+            <a href="pricing.html #web">Web Development</a>
+            <a href="pricing.html #app">App Development</a>
+          </div>
+        </div>
+        <a href="web_development.html">Web Development</a>
+        <a href="app_development.html">App Development</a>
+        <a href="about-us.html" id="active">About Us</a>
+      </div>
+      <div class="silog">
+        <div class="demo" id="demo">Free Demo</div>
+        <div class="signlogin">
+          <a onclick="document.getElementById('id08').style.display='block', signup()" style="width:auto;">Sign Up</a>
+          <a onclick="document.getElementById('id08').style.display='block' , login()" style="width:auto;">Login</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!-- LOGIN FORM STARTS HERE -->
+  <div class="login">
+    <div id="id08" class="form_bg">
+      <form class="form_bg-content animate">
+        <div class="container">
+          <span onclick="document.getElementById('id08').style.display='none'" class="close" title="Close Modal">&times;</span>
+          <label class="labels"><b>Username</b></label>
+          <input type="text" placeholder="Enter Username" required>
+          <label class="labels"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" required>
+          <button type="submit">
+            <h id="idlogin">Login</h>
+          </button>
+        </div>
+        <div class="container" style="background-color:#f1f1f1b5">
+          <button type="button" onclick="document.getElementById('id08').style.display='none'" class="cancelbtn">Cancel</button>
+          <button type="button" class="cancelbtn" id="forgot_password">Forgot password</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <!-- LOGIN FORM ENDS HERE -->
+  <main>
+    <div class="content">
+      <div class="abouthead">
+        <h1 class="heading">About Us</h1>
+      </div>
+      <div class="left">
+
+        <div class="about_us">
+
+          <p class="content_text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas cursus gravida facilisis. Duis pharetra quam dolor, ac pellentesque dui placerat vel. Quisque nec purus ut neque pharetra commodo. Nunc cursus nec sem eget eleifend. Cras
+            feugiat, velit vel pulvinar vestibulum, nisl sapien lacinia ipsum, nec eleifend sapien justo ac erat. Donec maximus eros et est elementum, at tincidunt neque iaculis. Aliquam luctus odio vitae libero vestibulum faucibus. Ut eu erat eget
+            dolor luctus sagittis sed sit amet ligula. In porttitor eu dui viverra laoreet. Suspendisse potenti. Ut aliquam, lorem eu pretium ultrices, ipsum nulla aliquam nunc, semper placerat est lorem vel velit.
+            <br><br>
+          </p>
+        </div>
+      </div>
+      <div class="right">
+        <div class="carousel">
+          <p class="content_text">
+            Maecenas pulvinar laoreet mauris varius vestibulum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla et mattis nulla. Pellentesque vitae fermentum est. Curabitur volutpat velit quis metus
+            rutrum, sit amet tincidunt urna blandit. Aenean dui odio, sagittis et arcu a, suscipit consectetur orci. Sed sollicitudin nulla at ullamcorper luctus. Integer eget ornare diam, eget auctor mauris. Suspendisse blandit lacus odio. Mauris id
+            malesuada elit, id vulputate nisi. Aliquam odio risus, mollis quis imperdiet eu, rutrum eu ante. Sed ut neque cursus, placerat lacus id, molestie orci. Vivamus molestie suscipit mi, sed maximus dolor mattis semper. Nunc blandit tellus et
+            mauris dictum rhoncus. Praesent lacus dui, hendrerit ut vestibulum eu, dapibus in eros.
+          </p>
+        </div>
+      </div>
+      <div class="hrcontainer">
+        <hr class="before">
+      </div>
+      <div class="our_team">
+        <h1 class="heading">Our Team</h1>
+        <hr>
+        <div class="promocard">
+
+
+
+
+
+          <div class="promotional_card card1" style=" left: 5%;">
+            <img src="../images/sample_icon.png" style="width:100%; height: 200px;">
+            <div class="promotional_card_container">
+              <div class="promotional_card_text">Pratham Gupta <br><br><br></div>
+            </div>
+          </div>
+
+          <div class="promotional_card card2" style=" left: 5%;">
+            <img src="../images/sample_icon.png" style="width:100%; height: 200px;">
+            <div class="promotional_card_container">
+              <div class="promotional_card_text">Chinmay Nagpal <br><br><br></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+
+  <footer>
+    <div class="footer">
+      <div>
+        <h1>Contact Us : 1929381237</h1>
+      </div>
+      <div>
+        <h1>Email: helpdesk@website.com</h1>
+      </div>
+      <div>
+        <h1>Address: X-89, XYZ Street, India</h1>
+      </div>
+
+    </div>
+  </footer>
+</body>
+<script type="text/javascript" src="../scripts/signup_login.js"></script>
+
+</html>
