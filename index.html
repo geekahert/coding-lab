@@ -84,9 +84,9 @@
 
       <!-- Image Gallery Starts HERE -->
       <div class="container_image_gallery">
-        <div class="image-g"><a href="html/pricing.html#web"><img src="images/Web_development.jpg" class="fade"></a></div>
-        <div class="image-g"><a href="#"><img src="images/Learn_to_code.jpg" class="fade"></a></div>
-        <div class="image-g"><a href="html/pricing.html#app"><img src="images/App_development.png" class="fade"></a></div>
+        <div class="image-g over"><a href="html/pricing.html#web" class ="hyperlinks"><img src="images/Web_development.jpg" class="fade"></a></div>
+        <div class="image-g over"><a href="#"  class ="hyperlinks"><img src="images/Learn_to_code.jpg" class="fade"></a></div>
+        <div class="image-g over"><a href="html/pricing.html#app"  class ="hyperlinks"><img src="images/App_development.png" class="fade"></a></div>
         <a class="prev" onclick="change_slide((-1))">❮</a>
         <a class="next" onclick="change_slide(1)">❯</a>
 
@@ -186,11 +186,12 @@
     var a;
     var image_index = 1;
     var slides = document.getElementsByClassName("fade");
+    var hyperlinks = document.getElementsByClassName("hyperlinks")
     automatic_slide_change(image_index);
 
 
     function change_slide(n) {
-      change_image_visibility(image_index += n);
+      change_image_visibility(n);
     }
 
     function change_image_visibility(n) {
@@ -198,19 +199,22 @@
       var y;
 
       var image = document.getElementsByClassName("image-g");
-      if (n > image.length) {
-        image_index = 1
-
-      }
-      if (n < 1) {
-        image_index = image.length
-
-      }
           slides[image_index-1].classList.remove("fade-in")
           slides[image_index-1].classList.add("fade-out")
+          hyperlinks[image_index-1].classList.add("disable_links")
 
-        slides[image_index].classList.add("fade-in")
-        slides[image_index].classList.remove("fade-out")
+          image_index += n
+
+          if (image_index > slides.length) {
+              image_index = 1
+            }
+          if (image_index < 1) {
+                image_index = 3
+              }
+                slides[image_index-1].classList.add("fade-in")
+        slides[image_index-1].classList.remove("fade-out")
+        hyperlinks[image_index-1].classList.remove("disable_links")
+
       clearTimeout(b);
       clearTimeout(a);
       a = setTimeout(automatic_slide_change, 5000);
@@ -222,6 +226,8 @@
     function automatic_slide_change(n) {
         slides[image_index-1].classList.remove("fade-in");
         slides[image_index-1].classList.add("fade-out");
+        hyperlinks[image_index-1].classList.add("disable_links")
+
 
       image_index++;
 
@@ -230,9 +236,12 @@
       }
       slides[image_index-1].classList.remove("fade-out");
       slides[image_index-1].classList.add("fade-in");
+      hyperlinks[image_index-1].classList.remove("disable_links")
 
       b = setTimeout(automatic_slide_change, 4000);
     }
+
+
 
     // SCRIPT FOR IMAGE GALLERY ENDS HERE
     //

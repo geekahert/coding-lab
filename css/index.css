@@ -3,7 +3,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 
 /* MAIN BODY */
@@ -41,16 +41,24 @@ h1 {
 
 /* IMAGE_GALLAREY */
 .container_image_gallery {
+  display: grid;
+  grid-template-columns: 1fr;
   position: relative;
   width: 100%;
   background-color: #d2ffff54;
+  /* text-align: centera; */
 }
-
+a
 .image-g {
   display: block;
   vertical-align: center;
+  /* text-align: center; */
 }
-
+/* .over{
+grid-row-start: 1;
+grid-row-end: 2;
+width: 100%;
+} */
 .image-g img {
   height: 60vh;
   border-radius: 20px;
@@ -206,3 +214,9 @@ h1 {
     padding-right: 150px;
     color: white;
  }
+
+
+.disable_links{
+  pointer-events: none;
+     cursor: default;
+}
