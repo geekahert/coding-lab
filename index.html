@@ -79,20 +79,51 @@
     <div class="content">
 
       <div class="heading">
-        <h1>Coding Labs - Brighten Your Kid's Future</h1>
+        <h1>Brighten Your Kid's Future</h1>
       </div>
 
       <!-- Image Gallery Starts HERE -->
       <div class="container_image_gallery">
-        <div class="image-g"><a href="html/pricing.html#web"><img src="images/Web_development.jpg"></a></div>
-        <div class="image-g"><a href="#"><img src="images/Learn_to_code.jpg"></a></div>
-        <div class="image-g"><a href="html/pricing.html#app"><img src="images/App_development.png"></a></div>
+        <div class="image-g"><a href="html/pricing.html#web"><img src="images/Web_development.jpg" class="fade"></a></div>
+        <div class="image-g"><a href="#"><img src="images/Learn_to_code.jpg" class="fade"></a></div>
+        <div class="image-g"><a href="html/pricing.html#app"><img src="images/App_development.png" class="fade"></a></div>
         <a class="prev" onclick="change_slide((-1))">❮</a>
         <a class="next" onclick="change_slide(1)">❯</a>
 
 
       </div>
       <!-- IMAGE GALLERY END HERE -->
+      <!-- PROMOTIONAL CARDS -->
+      <div class="promocard">
+
+        <div class="promotional_card" style=" left: 5%;">
+          <img src="images/steve-jobs.jpg" style="width:100%">
+          <div class="promotional_card_container">
+            <div class="promotional_card_text">"Everybody should learn to program a computer,
+              because it teaches you how to think" <h2 class="promotional_card_Name"> — Steve Jobs</h2>
+            </div>
+          </div>
+        </div>
+
+        <div class="promotional_card" style=" left: 5%;">
+          <img src="images/Stephen-Hawking.jpg" style="width:100%">
+          <div class="promotional_card_container">
+            <div class="promotional_card_text">“Whether you want to uncover the secrets of the universe, or you just
+              want to pursue a career in the 21st century, basic computer
+              programming is an essential skill to learn.” <h2 class="promotional_card_Name"> — Stephen Hawking</h2>
+            </div>
+          </div>
+        </div>
+
+        <div class="promotional_card" style=" left: 5%;">
+          <img src="images/Elon_musk.jpg" style="width:100%">
+          <div class="promotional_card_container">
+            <div class="promotional_card_text">“I taught myself how to program computers when I was a kid, bought my first computer when I was 10, and sold my first commercial program when I was 12.”<h2 class="promotional_card_Name">- Elon Musk</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- PROMOTIONAL CARS END HERE -->
       <div class="why_us">
         <div class="heading_2">Why Learn From Coding Labs</div><br><br>
         <div class="text_2">
@@ -128,37 +159,6 @@
 
         </div>
       </div>
-      <!-- PROMOTIONAL CARDS -->
-      <div class="promocard">
-
-        <div class="promotional_card">
-          <img src="images/steve-jobs.jpg" style="width:100%">
-          <div class="promotional_card_container">
-            <div class="promotional_card_text">"Everybody should learn to program a computer,
-              because it teaches you how to think" <h2 class="promotional_card_Name"> — Steve Jobs</h2>
-            </div>
-          </div>
-        </div>
-
-        <div class="promotional_card">
-          <img src="images/Stephen-Hawking.jpg" style="width:100%">
-          <div class="promotional_card_container">
-            <div class="promotional_card_text">“Whether you want to uncover the secrets of the universe, or you just
-              want to pursue a career in the 21st century, basic computer
-              programming is an essential skill to learn.” <h2 class="promotional_card_Name"> — Stephen Hawking</h2>
-            </div>
-          </div>
-        </div>
-
-        <div class="promotional_card">
-          <img src="images/Elon_musk.jpg" style="width:100%">
-          <div class="promotional_card_container">
-            <div class="promotional_card_text">“I taught myself how to program computers when I was a kid, bought my first computer when I was 10, and sold my first commercial program when I was 12.”<h2 class="promotional_card_Name">- Elon Musk</h2>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- PROMOTIONAL CARS END HERE -->
 
   </main>
   <!-- FOOTER STARTS HERE -->
@@ -185,6 +185,7 @@
     // SCRIPT FOR IMAGE GALLAREY STARTS HERE
     var a;
     var image_index = 1;
+    var slides = document.getElementsByClassName("fade");
     automatic_slide_change(image_index);
 
 
@@ -205,42 +206,41 @@
         image_index = image.length
 
       }
-      for (y = 0; y < image.length; y++) {
-        image[y].style.display = "none";
+          slides[image_index-1].classList.remove("fade-in")
+          slides[image_index-1].classList.add("fade-out")
 
-      }
-      image[image_index - 1].style.display = "block";
+        slides[image_index].classList.add("fade-in")
+        slides[image_index].classList.remove("fade-out")
       clearTimeout(b);
       clearTimeout(a);
-      a = setTimeout(automatic_slide_change, 3000);
+      a = setTimeout(automatic_slide_change, 5000);
 
 
 
     }
     // CHANGE SLIDE AUTOMATICALLY
     function automatic_slide_change(n) {
-
-      var i;
-      var slides = document.getElementsByClassName("image-g");
-
-      for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-      }
+        slides[image_index-1].classList.remove("fade-in");
+        slides[image_index-1].classList.add("fade-out");
 
       image_index++;
 
       if (image_index > slides.length) {
         image_index = 1
       }
+      slides[image_index-1].classList.remove("fade-out");
+      slides[image_index-1].classList.add("fade-in");
 
-      slides[image_index - 1].style.display = "block";
-
-      b = setTimeout(automatic_slide_change, 2000);
+      b = setTimeout(automatic_slide_change, 4000);
     }
+
     // SCRIPT FOR IMAGE GALLERY ENDS HERE
     //
 
     function hide_show(n) {
+      // var ul = document.getElementsByClassName('list');
+      // var li = document.getElementsByTagName('li')
+
       if (document.getElementById(n).style.display == "block") {
         document.getElementById(n).style.display = "none"
 
@@ -252,6 +252,9 @@
 
 
     function hide_show_down(n) {
+      // var ul = document.getElementsByClassName('list');
+      // var li = document.getElementsByTagName('li')
+
       if (document.getElementById(n).innerHTML == "▼") {
         document.getElementById(n).innerHTML = "▬"
 
