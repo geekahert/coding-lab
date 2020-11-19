@@ -2,12 +2,21 @@
   margin: 0cm;
   padding: 0cm;
   box-sizing: border-box;
+  cursor: default;
 }
 
 html {
   font-size: 10px;
 }
-
+a{
+  cursor: pointer;
+}
+a img{
+  cursor: pointer;
+}
+button{
+  cursor: pointer;
+}
 .navbar {
   background-color: rgba(255, 255, 255, 0.8);
   position: fixed;

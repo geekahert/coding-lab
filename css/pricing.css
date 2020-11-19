@@ -1,3 +1,5 @@
+
+
 :root {
   /* Web Develpoment Card*/
   --card_web_background: rgb(255, 255, 255);
@@ -61,6 +63,7 @@ body {
   color: rgb(255, 183, 3);
   background-color: rgb(2, 48, 71);
   font-size: 15px;
+  cursor: pointer;
 }
 
 .btn:hover {
@@ -196,6 +199,7 @@ body {
 /* CARDS COLOR END HERE */
 /* Button */
 .add_to_cart_button, .add_to_cart_button_combo {
+  cursor: pointer;
   box-shadow: 1px 3px 41px -50px #000000;
   background-color: #e03140;
   border-radius: 28px;
@@ -255,6 +259,7 @@ body {
 }
 
 .close_addedtocart {
+  cursor: pointer;
   padding: 6px;
   border-width: 3px;
   border-radius: 3px;
