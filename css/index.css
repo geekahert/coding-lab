@@ -7,11 +7,14 @@ body {
 }
 
 /* MAIN BODY */
-h1 {
-  font-size: 5rem;
-    text-align: left;
+/* @import url('https://fonts.googleapis.com/css2?family=Lato:wght@900&display=swap'); */
+.heading h1 {
+    font-size: 5rem;
+    text-align: center;
     color: #f4f4ff;
-    font-family: monospace;
+    font-family: sans-serif;
+    text-shadow: #00228d 0 0 20px;
+
 }
 
 @keyframes fontchange {
@@ -208,7 +211,6 @@ a
  .heading{
    font-size: 40px;
     float: right;
-    padding-right: 150px;
     color: white;
  }
 

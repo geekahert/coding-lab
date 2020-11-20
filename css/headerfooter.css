@@ -169,3 +169,7 @@ a {
 .signlogin a {
   cursor: pointer;
 }
+#active{
+  pointer-events: none;
+     cursor: default;
+}
