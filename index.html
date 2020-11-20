@@ -274,19 +274,24 @@
 
     }
 
-    // window.addEventListener('scroll', function() {
-    //   var scroll = document.body;
-    //   var y = scroll.scrollTop;
-    //   document.getElementById ("demo").innerHTML = "Vertically: " + y + "px";
-    //       if(scroll.scrollTop > 1753){
-    //         document.getElementById(1).style.display='none'
-    //         document.getElementById("a").style.position='sticky'
-    //
-    //
-    //       }
-    //
-    //
-    //     })
+    window.addEventListener('scroll', function() {
+          var scroll = document.body;
+          var navbar = document.getElementsByClassName('navbar');
+          if(scroll.scrollTop > 100){
+            navbar[0].classList.add("change_opacity");
+
+
+          }
+          else {
+            navbar[0].classList.remove("change_opacity");
+
+          }
+
+
+        })
+
+
+
   </script>
   <script type="text/javascript" src="scripts/signup_login.js"></script>
 

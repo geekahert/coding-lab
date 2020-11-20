@@ -17,19 +17,18 @@ a img{
 button{
   cursor: pointer;
 }
+
 .navbar {
   background-color: rgba(255, 255, 255, 0.8);
   position: fixed;
   z-index: 3;
-}
-
-.navbar {
   display: flex;
   flex-direction: row;
   width: 100%;
   height: 10vh;
   justify-content: space-between;
   top: 0;
+  transition: ease 2s;
 }
 
 .navigation {
@@ -47,7 +46,7 @@ button{
   width: 20%;
   text-align: center;
   gap: 10%;
-  font-size: 2rem;
+  font-size: 1.8rem;
   /* height: 100px; */
 }
 
@@ -172,4 +171,9 @@ a {
 #active{
   pointer-events: none;
      cursor: default;
+}
+
+
+.change_opacity{
+  background-color: rgba(255, 255, 255, 1);
 }
