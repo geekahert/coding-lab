@@ -8,11 +8,11 @@ body {
 /* MAIN BODY */
 /* @import url('https://fonts.googleapis.com/css2?family=Lato:wght@900&display=swap'); */
 .heading h1 {
-    font-size: 5rem;
+    font-size: 6rem;
     text-align: center;
     color: #f4f4ff;
     font-family: sans-serif;
-    text-shadow: #00228d 0 0 20px;
+  
 
 }
 
